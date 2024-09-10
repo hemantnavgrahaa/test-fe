@@ -1,7 +1,7 @@
 "use server";
 
 import { Card, Dropdown, DropdownItem } from "flowbite-react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default async function FriendRequest() {
   return (

@@ -1,9 +1,10 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Logout from "@/components/molecules/Logout";
 import { authOptions } from "@/auth";
 
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
+import Card from "@/components/atoms/card/card";
 
 const HomePage = async () => {
   const session = await getServerSession(authOptions);
@@ -14,6 +15,7 @@ const HomePage = async () => {
 
   return (
     <div className="flex flex-col items-center m-4">
+      <Card />
       {session?.user?.name && session?.user?.image ? (
         <>
           <h1 className="text-3xl my-2">Welcome, {session?.user?.name}</h1>

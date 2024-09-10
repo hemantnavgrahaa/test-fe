@@ -1,6 +1,8 @@
-import NavbarWrapper from "@/components/molecules/Navbar/page";
-import FriendRequest from "@/components/molecules/FriendReq";
-import FooterWrapper from "@/components/molecules/Footer/footer";
+// import NavbarWrapper from "@/components/molecules/Navbar/page";
+// import FriendRequest from "@/components/molecules/FriendReq";
+// import FooterWrapper from "@/components/molecules/Footer/footer";
+
+import BottomNavigation from "@/components/atoms/bottomNavigation/bottomNavigation";
 
 export default function RootProviders({
   children,
@@ -9,9 +11,10 @@ export default function RootProviders({
 }>) {
   return (
     <>
-      <NavbarWrapper />
+      {/* <NavbarWrapper /> */}
       {children}
-      <FriendRequest />
+      <BottomNavigation />
+      {/* <FriendRequest /> */}
       {/* <div className="flex items-center justify-center">
         <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
           <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
@@ -60,7 +63,7 @@ export default function RootProviders({
           </div>
         </div>
       </div> */}
-      <FooterWrapper />
+      {/* <FooterWrapper /> */}
     </>
   );
 }
