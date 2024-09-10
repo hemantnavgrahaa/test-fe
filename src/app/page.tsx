@@ -26,10 +26,12 @@ const HomePage = async () => {
             height={72}
             className="rounded-full"
           />
-          <pre>{JSON.stringify(session, null, 2)}</pre>
+          <div className="mx-4">
+            <pre className="text-wrap">{JSON.stringify(session, null, 2)}</pre>
+          </div>
         </>
       ) : (
-        <h1 className="text-3xl my-2">Welcome, {session?.user?.email}</h1>
+        <h1 className="text-3xl my-2 ">Welcome, {session?.user?.email}</h1>
       )}
       <Logout />
     </div>
