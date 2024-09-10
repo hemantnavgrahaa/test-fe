@@ -1,4 +1,5 @@
 import React from "react";
+import DarkModeToggle from "../darkModeToggle/darkModeToggle";
 
 const BNavigationTwo = () => {
   return (
@@ -93,9 +94,9 @@ const BNavigationTwo = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M9 1v16M1 9h16"
               />
             </svg>
@@ -123,13 +124,16 @@ const BNavigationTwo = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
               />
             </svg>
-            <span className="sr-only">Search</span>
+            <span className="sr-only">
+              Search
+              {/* <DarkModeToggle /> */}
+            </span>
           </button>
           <div
             id="tooltip-search"
@@ -153,9 +157,9 @@ const BNavigationTwo = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"
               />
             </svg>

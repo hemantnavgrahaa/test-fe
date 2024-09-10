@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className={sorts_mill_goudy.className}>
+      <body className={`${sorts_mill_goudy.className} light`}>
         <RootProviders>{children}</RootProviders>
       </body>
     </html>
