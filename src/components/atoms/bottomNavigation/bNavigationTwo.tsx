@@ -1,5 +1,5 @@
 import React from "react";
-import DarkModeToggle from "../darkModeToggle/darkModeToggle";
+import DarkModeToggle from "@/components/atoms/darkModeToggle/darkModeToggle";
 
 const BNavigationTwo = () => {
   return (
@@ -110,38 +110,22 @@ const BNavigationTwo = () => {
             New post
             <div className="tooltip-arrow" data-popper-arrow></div>
           </div>
-          <button
+          {/* <button
             data-tooltip-target="tooltip-search"
             type="button"
             className="inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
-            <svg
-              className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
             <span className="sr-only">
               Search
-              {/* <DarkModeToggle /> */}
             </span>
-          </button>
+          </button> */}
+          <DarkModeToggle />
           <div
             id="tooltip-search"
             role="tooltip"
             className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
           >
-            Search
-            <div className="tooltip-arrow" data-popper-arrow></div>
+            Dark mode
           </div>
           <button
             data-tooltip-target="tooltip-settings"
