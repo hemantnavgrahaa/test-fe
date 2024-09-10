@@ -6,11 +6,11 @@ import { signIn, signOut } from "next-auth/react";
 
 export async function doSocialLogin(formData: FormData) {
   const action = formData.get("action");
-  await signIn(action as any, {});
+  await signIn(action as any, { callbackUrl: "/" });
 }
 
 export async function doLogout() {
-  await signOut({});
+  await signOut({ callbackUrl: "/login" });
 }
 
 export async function doCredentialLogin(formData: FormData) {
