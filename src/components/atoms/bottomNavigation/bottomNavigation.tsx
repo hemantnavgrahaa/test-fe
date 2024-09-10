@@ -7,9 +7,10 @@ import { MdOutlineExplore } from "react-icons/md";
 const BottomNavigation = () => {
   const pathname = usePathname();
   console.log({ pathname });
+
   return (
     <>
-      <div className="my-8" />
+      <div className="py-8" />
       <div className="fixed bottom-0 left-0 z-50 w-full bg-transparent ">
         <div className="flex items-center justify-center ">
           <div className="w-full max-w-md mx-auto">
