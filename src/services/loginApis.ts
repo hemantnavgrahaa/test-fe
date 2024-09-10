@@ -1,4 +1,4 @@
-import axiosInstance from "./axiosInstance";
+import { axiosInternal } from "./axiosInstance";
 
 export const checkLogin = async ({
   email,
@@ -8,23 +8,12 @@ export const checkLogin = async ({
   password: string;
 }) => {
   try {
-    // const res = await axiosInstance.post("/login", {
-    //   email,
-    //   password,
-    // });
-    console.log({ email, password });
-    const response = await fetch("/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
+    const { data } = await axiosInternal.post("/api/login", {
+      email,
+      password,
     });
 
-    return await response.json();
+    return data;
   } catch (error) {
     console.error(error);
     return null;

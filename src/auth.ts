@@ -24,10 +24,7 @@ export const authOptions: NextAuthOptions = {
       credentials: credentials,
       name: "credentials",
       // @ts-ignore
-      authorize: async () => ({
-        email: "cat@gmail.com",
-        name: "Cat god",
-      }),
+      authorize: credentialsAuth,
     }),
   ],
   callbacks: {

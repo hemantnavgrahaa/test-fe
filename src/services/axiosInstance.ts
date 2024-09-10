@@ -1,15 +1,23 @@
 import axios from "axios";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const INTERNAL_BASE_URL = process.env.NEXT_PUBLIC_FRONTEND_BASE_URL;
 
-const axiosInstance = axios.create({
-  baseURL: BASE_URL,
+const axiosPublic = axios.create({
+  baseURL: PUBLIC_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-axiosInstance.interceptors.request.use(
+const axiosInternal = axios.create({
+  baseURL: INTERNAL_BASE_URL,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+axiosPublic.interceptors.request.use(
   (config) => {
     // // Get the token from local storage
     // const token = localStorage.getItem("token"); // Adjust the key as needed
@@ -29,7 +37,7 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-axiosInstance.interceptors.response.use(
+axiosPublic.interceptors.response.use(
   (response) => response,
   (error) => {
     const { status } = error.response;
@@ -45,4 +53,4 @@ axiosInstance.interceptors.response.use(
   }
 );
 
-export default axiosInstance;
+export { axiosInternal, axiosPublic };
