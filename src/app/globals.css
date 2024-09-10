@@ -2,26 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.hover\:w-full:hover {
+  width: 100%;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.group:hover .group-hover\:w-full {
+  width: 100%;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.group:hover .group-hover\:inline-block {
+  display: inline-block;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.group:hover .group-hover\:flex-grow {
+  flex-grow: 1;
 }
