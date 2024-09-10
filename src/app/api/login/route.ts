@@ -15,9 +15,9 @@ export async function POST(request: Request) {
     );
 
     if (user && user.password === `${password}`) {
-      const { password, ...rest } = user;
-
-      return NextResponse.json(rest, { status: 200 });
+      const data: Omit<User, "password"> & { password?: string } = { ...user };
+      delete data.password;
+      return NextResponse.json(data, { status: 200 });
     } else {
       return NextResponse.json(
         { message: "Invalid email or password!" },

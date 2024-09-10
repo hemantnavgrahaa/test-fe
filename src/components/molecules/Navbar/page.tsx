@@ -1,7 +1,7 @@
 "use client";
 
 import { MegaMenu, Navbar } from "flowbite-react";
-import { HiArrowRight, HiChevronDown } from "react-icons/hi";
+import { HiChevronDown } from "react-icons/hi";
 
 export default function NavbarWrapper() {
   return (
