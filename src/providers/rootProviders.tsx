@@ -2,7 +2,8 @@
 // import FriendRequest from "@/components/molecules/FriendReq";
 // import FooterWrapper from "@/components/molecules/Footer/footer";
 
-import BottomNavigation from "@/components/atoms/bottomNavigation/bottomNavigation";
+import BottomNavigation from "@/components/atoms/bottomNavigation/bNavigationOne";
+import BNavigationTwo from "@/components/atoms/bottomNavigation/bNavigationTwo";
 
 export default function RootProviders({
   children,
@@ -13,7 +14,8 @@ export default function RootProviders({
     <>
       {/* <NavbarWrapper /> */}
       {children}
-      <BottomNavigation />
+      {/* <BottomNavigation /> */}
+      <BNavigationTwo />
       {/* <FriendRequest /> */}
       {/* <div className="flex items-center justify-center">
         <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">

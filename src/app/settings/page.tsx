@@ -1,11 +1,12 @@
 import React from "react";
-import BottomNavigation from "@/components/atoms/bottomNavigation/bottomNavigation";
+import BNavigationOne from "@/components/atoms/bottomNavigation/bNavigationOne";
 import Card from "@/components/atoms/card/card";
+import BNavigationTwo from "@/components/atoms/bottomNavigation/bNavigationTwo";
 
 const Settings = () => {
   return (
     <>
-      <BottomNavigation />
+      <BNavigationTwo />
       <Card />
     </>
   );

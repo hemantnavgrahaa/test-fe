@@ -6,7 +6,7 @@ import { MdOutlineExplore } from "react-icons/md";
 
 const BottomNavigation = () => {
   const pathname = usePathname();
-  console.log({ pathname });
+  console.log({ pathname, condition: pathname === "/" });
 
   return (
     <>

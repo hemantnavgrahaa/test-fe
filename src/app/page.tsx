@@ -16,7 +16,9 @@ const HomePage = async () => {
   return (
     <div className="flex flex-col items-center m-4">
       <Card />
-      {session?.user?.name && session?.user?.image ? (
+      <Card />
+      <Card />
+      {/* {session?.user?.name && session?.user?.image ? (
         <>
           <h1 className="text-3xl my-2">Welcome, {session?.user?.name}</h1>
           <Image
@@ -32,7 +34,7 @@ const HomePage = async () => {
         </>
       ) : (
         <h1 className="text-3xl my-2 ">Welcome, {session?.user?.email}</h1>
-      )}
+      )} */}
       <Logout />
     </div>
   );
