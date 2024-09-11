@@ -38,7 +38,9 @@ const LoginForm = () => {
         onSubmit={onSubmit}
       >
         <div className="my-2">
-          <label htmlFor="email">Email Address</label>
+          <label className="text-lg  dark:text-white" htmlFor="email">
+            Email Address
+          </label>
           <input
             className="border mx-2 border-gray-500 rounded text-black"
             type="email"
@@ -48,7 +50,9 @@ const LoginForm = () => {
         </div>
 
         <div className="my-2">
-          <label htmlFor="password">Password</label>
+          <label className="text-lg  dark:text-white" htmlFor="password">
+            Password
+          </label>
           <input
             className="border mx-2 border-gray-500 rounded text-black"
             type="password"
@@ -59,7 +63,7 @@ const LoginForm = () => {
 
         <button
           type="submit"
-          className="bg-orange-300 mt-4 rounded flex justify-center items-center w-36"
+          className="bg-orange-300 mt-4 p-1 rounded flex justify-center items-center w-36 dark:text-white"
         >
           Ceredential Login
         </button>
