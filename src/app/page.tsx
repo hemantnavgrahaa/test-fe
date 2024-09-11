@@ -1,4 +1,3 @@
-import Image from "next/legacy/image";
 import Logout from "@/components/molecules/Logout";
 import { authOptions } from "@/auth";
 
