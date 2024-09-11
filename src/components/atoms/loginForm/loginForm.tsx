@@ -76,16 +76,16 @@ const LoginForm = () => {
         </button>
         <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
           Forgot password?{" "}
-          <a
-            href="#"
+          <Link
+            href={allRoutes.FORGOT_PASSWORD}
             className="text-blue-700 hover:underline dark:text-blue-500"
           >
             Reset now!
-          </a>
+          </Link>
           <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-300">
             Don&apos;t have an account?{" "}
             <Link
-              href="/signup"
+              href={allRoutes.SIGNUP}
               className="text-blue-700 hover:underline dark:text-blue-500"
             >
               Create now!
