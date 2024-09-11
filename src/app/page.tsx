@@ -5,36 +5,20 @@ import { authOptions } from "@/auth";
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 import Card from "@/components/atoms/card/card";
+import { allRoutes } from "@/constants/allRoutes";
 
 const HomePage = async () => {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    redirect("/login");
+    redirect(allRoutes.LOGIN);
   }
 
   return (
-    <div className="flex flex-col items-center m-4">
+    <div className="flex flex-col items-center gap-5 m-4 ">
       <Card />
       <Card />
       <Card />
-      {/* {session?.user?.name && session?.user?.image ? (
-        <>
-          <h1 className="text-3xl my-2">Welcome, {session?.user?.name}</h1>
-          <Image
-            src={session?.user?.image}
-            alt={session?.user?.name}
-            width={72}
-            height={72}
-            className="rounded-full"
-          />
-          <div className="mx-4">
-            <pre className="text-wrap">{JSON.stringify(session, null, 2)}</pre>
-          </div>
-        </>
-      ) : (
-        <h1 className="text-3xl my-2 ">Welcome, {session?.user?.email}</h1>
-      )} */}
       <Logout />
     </div>
   );
