@@ -27,12 +27,12 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={() => toggleDarkMode()}
-      className="p-2 text-white flex justify-center items-center"
+      className="p-2 text-gray-500 dark:text-gray-400 flex justify-center items-center"
     >
       {isDarkMode ? (
         <MdWbSunny className="text-2xl" />
       ) : (
-        <FaCloudSun className="text-3xl text-gray-500" />
+        <FaCloudSun className="text-3xl" />
       )}
     </button>
   );
