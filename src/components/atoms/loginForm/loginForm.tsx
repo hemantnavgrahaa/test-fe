@@ -83,7 +83,7 @@ const LoginForm = () => {
             Reset now!
           </a>
           <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-300">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link
               href="/signup"
               className="text-blue-700 hover:underline dark:text-blue-500"
