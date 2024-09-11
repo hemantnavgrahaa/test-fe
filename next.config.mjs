@@ -2,8 +2,11 @@
 
 import withPWA from "next-pwa";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const nextPWA = withPWA({
   dest: "public",
+  disable: !isProduction,
 });
 
 const nextConfig = {
