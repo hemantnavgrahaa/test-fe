@@ -4,7 +4,7 @@ const Card = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="max-w-[720px] mx-auto">
-        <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+        <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-clip-border text-gray-700 shadow-lg bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
           <div className="w-96 h-56 relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
             <Image
               src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
@@ -32,10 +32,10 @@ const Card = () => {
           </div>
           <div className="p-6">
             <div className="flex items-center justify-between mb-3">
-              <h5 className="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
+              <h5 className="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900 dark:text-white">
                 Wooden House, Florida
               </h5>
-              <p className="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+              <p className="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 dark:text-white antialiased">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -51,12 +51,15 @@ const Card = () => {
                 5.0
               </p>
             </div>
-            <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-700">
+            <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-700 dark:text-white">
               Enter a freshly updated and thoughtfully furnished peaceful home
               surrounded by ancient trees, stone walls, and open meadows.
             </p>
             <div className="inline-flex flex-wrap items-center gap-3 mt-8 group">
-              <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+              <span
+                className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70 
+     dark:border-gray-100/10 dark:bg-gray-100/10 dark:text-gray-100 dark:hover:border-gray-100/20 dark:hover:bg-gray-100/20 dark:group-hover:opacity-90"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -72,7 +75,10 @@ const Card = () => {
                   <path d="M2.25 18a.75.75 0 000 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 00-.75-.75H2.25z"></path>
                 </svg>
               </span>
-              <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+              <span
+                className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70 
+     dark:border-gray-100/10 dark:bg-gray-100/10 dark:text-gray-100 dark:hover:border-gray-100/20 dark:hover:bg-gray-100/20 dark:group-hover:opacity-90"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -86,7 +92,10 @@ const Card = () => {
                   ></path>
                 </svg>
               </span>
-              <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+              <span
+                className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70 
+     dark:border-gray-100/10 dark:bg-gray-100/10 dark:text-gray-100 dark:hover:border-gray-100/20 dark:hover:bg-gray-100/20 dark:group-hover:opacity-90"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -97,7 +106,10 @@ const Card = () => {
                   <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"></path>
                 </svg>
               </span>
-              <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+              <span
+                className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70 
+     dark:border-gray-100/10 dark:bg-gray-100/10 dark:text-gray-100 dark:hover:border-gray-100/20 dark:hover:bg-gray-100/20 dark:group-hover:opacity-90"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -112,7 +124,10 @@ const Card = () => {
                   ></path>
                 </svg>
               </span>
-              <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+              <span
+                className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70 
+     dark:border-gray-100/10 dark:bg-gray-100/10 dark:text-gray-100 dark:hover:border-gray-100/20 dark:hover:bg-gray-100/20 dark:group-hover:opacity-90"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -126,7 +141,10 @@ const Card = () => {
                   ></path>
                 </svg>
               </span>
-              <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+              <span
+                className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70 
+     dark:border-gray-100/10 dark:bg-gray-100/10 dark:text-gray-100 dark:hover:border-gray-100/20 dark:hover:bg-gray-100/20 dark:group-hover:opacity-90"
+              >
                 +20
               </span>
             </div>
