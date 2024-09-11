@@ -73,12 +73,12 @@ const LoginForm = () => {
           Log In
         </button>
         <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-          Not registered?{" "}
+          Forgot password?{" "}
           <a
             href="#"
             className="text-blue-700 hover:underline dark:text-blue-500"
           >
-            Create account
+            Reset now!
           </a>
         </div>
       </form>

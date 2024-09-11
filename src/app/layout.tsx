@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Sorts_Mill_Goudy } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import RootProviders from "@/providers/rootProviders";
 
-const sorts_mill_goudy = Sorts_Mill_Goudy({
+const googleFont = Poppins({
   weight: "400",
   style: "normal",
   subsets: ["latin"],
@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body
-        className={`${sorts_mill_goudy.className} light transition-colors duration-200`}
+        className={`${googleFont.className} light transition-colors duration-200`}
       >
         <RootProviders>{children}</RootProviders>
       </body>
