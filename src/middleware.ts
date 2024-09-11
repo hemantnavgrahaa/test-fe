@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
+import { allRoutes } from "./constants/allRoutes";
 
 // Define the secret for JWT validation
 const secret = process.env.NEXT_PUBLIC_SECRET as string;
@@ -12,7 +13,7 @@ export async function middleware(req: NextRequest) {
   // If there's no token and the request is not to a public path, redirect to login
   if (!token && !req.nextUrl.pathname.startsWith("/public")) {
     const url = req.nextUrl.clone();
-    url.pathname = "/login";
+    url.pathname = allRoutes.LOGIN;
     return NextResponse.redirect(url);
   }
 

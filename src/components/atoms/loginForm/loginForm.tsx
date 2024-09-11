@@ -1,6 +1,8 @@
 "use client";
 import { doCredentialLogin } from "@/app/actions";
 import SocialLogins from "@/components/molecules/SocialLogins";
+import { allRoutes } from "@/constants/allRoutes";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 
@@ -17,7 +19,7 @@ const LoginForm = () => {
         console.error(response.error);
         setError(response.error);
       } else {
-        router.push("/");
+        router.push(allRoutes.HOME);
       }
     } catch (e) {
       console.error(e);
@@ -30,8 +32,8 @@ const LoginForm = () => {
         {error.replace("Error:", "")}
       </div>
       <SocialLogins />
-      <form onSubmit={onSubmit} className="space-y-6" action="#">
-        <h5 className="text-xl -mb-8 text-center font-medium text-gray-900 dark:text-white">
+      <form onSubmit={onSubmit} className="space-y-6 relative" action="#">
+        <h5 className="text-xl -mb-5 text-center font-medium text-gray-900 dark:text-white">
           OR
         </h5>
         <div>
@@ -70,7 +72,7 @@ const LoginForm = () => {
           type="submit"
           className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          Log In
+          Login
         </button>
         <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
           Forgot password?{" "}
@@ -80,6 +82,15 @@ const LoginForm = () => {
           >
             Reset now!
           </a>
+          <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-300">
+            Don't have an account?{" "}
+            <Link
+              href="/signup"
+              className="text-blue-700 hover:underline dark:text-blue-500"
+            >
+              Create now!
+            </Link>
+          </div>
         </div>
       </form>
     </div>

@@ -1,13 +1,14 @@
 import { authOptions } from "@/auth";
 import LoginForm from "@/components/atoms/loginForm/loginForm";
+import { allRoutes } from "@/constants/allRoutes";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
-export default async function Login() {
+export default async function Signup() {
   const session = await getServerSession(authOptions);
 
   if (session) {
-    redirect("/");
+    redirect(allRoutes.HOME);
   }
 
   return (

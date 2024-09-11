@@ -45,7 +45,7 @@ axiosPublic.interceptors.response.use(
       status
       //   case 401:
       //     localStorage.removeItem("token");
-      //     window.location.href = "/login";
+      //     window.location.href = allRoutes.LOGIN;
       //     break;
     ) {
     }

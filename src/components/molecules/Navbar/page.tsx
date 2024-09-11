@@ -1,26 +1,27 @@
 "use client";
 
+import { allRoutes } from "@/constants/allRoutes";
 import { MegaMenu, Navbar } from "flowbite-react";
 import { HiChevronDown } from "react-icons/hi";
 
 export default function NavbarWrapper() {
   return (
     <MegaMenu>
-      <Navbar.Brand href="/">
+      <Navbar.Brand href={allRoutes.HOME}>
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
           Flowbite
         </span>
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="/">Home</Navbar.Link>
-        <Navbar.Link href="/">Company</Navbar.Link>
+        <Navbar.Link href={allRoutes.HOME}>Home</Navbar.Link>
+        <Navbar.Link href={allRoutes.HOME}>Company</Navbar.Link>
         <MegaMenu.DropdownToggle>
           Marketplace
           <HiChevronDown className="ml-2" />
         </MegaMenu.DropdownToggle>
-        <Navbar.Link href="/">Resources</Navbar.Link>
-        <Navbar.Link href="/">Contact</Navbar.Link>
+        <Navbar.Link href={allRoutes.HOME}>Resources</Navbar.Link>
+        <Navbar.Link href={allRoutes.HOME}>Contact</Navbar.Link>
       </Navbar.Collapse>
       {/* <MegaMenu.Dropdown>
         <div className="mt-6 border-y border-gray-200 bg-white shadow-sm dark:border-gray-600 dark:bg-gray-800">

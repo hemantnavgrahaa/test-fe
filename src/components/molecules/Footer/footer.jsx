@@ -8,6 +8,7 @@ import {
   BsInstagram,
   BsTwitter,
 } from "react-icons/bs";
+import { allRoutes } from "@/constants/allRoutes";
 
 const FooterWrapper = () => {
   return (
@@ -16,7 +17,7 @@ const FooterWrapper = () => {
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
             <Footer.Brand
-              href="/"
+              href={allRoutes.HOME}
               src="logo.png"
               alt="Flowbite Logo"
               name="HY"

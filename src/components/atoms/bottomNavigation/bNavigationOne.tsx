@@ -1,4 +1,5 @@
 "use client";
+import { allRoutes } from "@/constants/allRoutes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoHomeOutline, IoSearch, IoSettingsOutline } from "react-icons/io5";
@@ -6,7 +7,7 @@ import { MdOutlineExplore } from "react-icons/md";
 
 const BottomNavigation = () => {
   const pathname = usePathname();
-  console.log({ pathname, condition: pathname === "/" });
+  console.log({ pathname, condition: pathname === allRoutes.HOME });
 
   return (
     <>
@@ -18,12 +19,12 @@ const BottomNavigation = () => {
               <div className="flex">
                 <div className="flex-1 group">
                   <Link
-                    href="/"
+                    href={allRoutes.HOME}
                     className={`flex items-end justify-center text-center
                        mx-auto px-4 pt-2 w-full text-gray-400
                         border-b-2 border-transparent
                         ${
-                          pathname === "/" &&
+                          pathname === allRoutes.HOME &&
                           "group-hover:border-indigo-500 group-hover:text-indigo-500"
                         }`}
                   >
@@ -46,7 +47,7 @@ const BottomNavigation = () => {
                 </div>
                 <div className="flex-1 group">
                   <Link
-                    href="/profile/cat"
+                    href={allRoutes.PROFILE("cat")}
                     className="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500 border-b-2 border-transparent group-hover:border-indigo-500"
                   >
                     <span className="block px-1 pt-1 pb-2">
@@ -57,7 +58,7 @@ const BottomNavigation = () => {
                 </div>
                 <div className="flex-1 group">
                   <Link
-                    href="/settings"
+                    href={allRoutes.SETTINGS}
                     className="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500 border-b-2 border-transparent group-hover:border-indigo-500"
                   >
                     <span className="block px-1 pt-1 pb-2">

@@ -11,8 +11,8 @@ const SocialLogins = () => {
         name="action"
         value="google"
       >
-        <Image src={googleSvg} width={25} height={25} alt="google" /> Log In
-        <p>With Google</p>
+        <Image src={googleSvg} width={25} height={25} alt="google" /> Login
+        <p>with Google</p>
       </button>
     </form>
   );
