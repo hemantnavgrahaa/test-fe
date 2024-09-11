@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { FaToggleOff } from "react-icons/fa6";
-import { FaToggleOn } from "react-icons/fa6";
+import { MdWbSunny } from "react-icons/md";
+import { FaCloudSun } from "react-icons/fa";
 
 const DarkModeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -27,9 +27,13 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={() => toggleDarkMode()}
-      className="p-2 bg-gray-800 text-white rounded-md "
+      className="p-2 text-white flex justify-center items-center"
     >
-      {isDarkMode ? <FaToggleOff /> : <FaToggleOn />}
+      {isDarkMode ? (
+        <MdWbSunny className="text-2xl" />
+      ) : (
+        <FaCloudSun className="text-3xl text-gray-500" />
+      )}
     </button>
   );
 };
