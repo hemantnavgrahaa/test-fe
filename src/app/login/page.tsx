@@ -1,5 +1,5 @@
 import { authOptions } from "@/auth";
-import LoginForm from "@/components/molecules/LoginForm";
+import LoginForm from "@/components/atoms/loginForm/loginForm";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
