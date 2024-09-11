@@ -1,5 +1,5 @@
 import { authOptions } from "@/auth";
-import LoginForm from "@/components/atoms/loginForm/loginForm";
+import SignupForm from "@/components/atoms/signupForm/signupForm";
 import { allRoutes } from "@/constants/allRoutes";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
@@ -13,7 +13,7 @@ export default async function Signup() {
 
   return (
     <div className="flex flex-col justify-center items-center m-4">
-      <LoginForm />
+      <SignupForm />
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default async function Login() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center m-4">
+    <div className="flex min-h-screen flex-col justify-center items-center m-4">
       <LoginForm />
     </div>
   );
