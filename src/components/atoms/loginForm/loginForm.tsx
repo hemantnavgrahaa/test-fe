@@ -34,7 +34,7 @@ const LoginForm = () => {
             <Label htmlFor="email1" value="Your email" />
           </div>
           <TextInput
-            className=""
+            className="[&>div>input]:p-2 [&>div>input]:text-base"
             id="email1"
             name="email"
             type="email"
@@ -47,18 +47,16 @@ const LoginForm = () => {
             <Label htmlFor="password1" value="Your password" />
           </div>
           <TextInput
-            className=""
+            className="[&>div>input]:p-2 [&>div>input]:text-base"
             name="password"
             id="password1"
             type="password"
             required
           />
         </div>
-        <div className="flex items-center gap-2">
-          <Checkbox id="remember" />
-          <Label htmlFor="remember">Remember me</Label>
-        </div>
-        <Button type="submit">Login</Button>
+        <Button className="py-0.5" type="submit">
+          Login
+        </Button>
       </form>
       <SocialLogins />
     </Card>
