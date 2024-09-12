@@ -4,6 +4,6 @@ export const allRoutes = {
   PROFILE: (id: string) => `/profile/${id}`,
   LOGIN: "/auth/login",
   SIGNUP: "/auth/signup",
-  FORGOT_PASSWORD: "/auth/forgot-pass",
+  FORGOT_PASSWORD: "/auth/forgot-password",
   DEMO: "/demo",
 };
