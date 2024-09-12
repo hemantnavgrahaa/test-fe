@@ -23,5 +23,5 @@ export async function middleware(req: NextRequest) {
 
 // Define which paths this middleware should be applied to
 export const config = {
-  matcher: ["/settings/:path*", "/profile/:id*"],
+  matcher: ["/settings", "/profile/:id*"],
 };
