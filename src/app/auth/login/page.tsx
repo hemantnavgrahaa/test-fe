@@ -2,13 +2,13 @@
 import LoginForm from "@/components/atoms/loginForm/loginForm";
 import { allRoutes } from "@/constants/allRoutes";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
-export default async function Login() {
-  const { data: session } = useSession();
+export default function Login() {
+  const session = useSession();
   const router = useRouter();
 
-  if (session) {
+  if (session?.data) {
     router.push(allRoutes.HOME);
   }
 
