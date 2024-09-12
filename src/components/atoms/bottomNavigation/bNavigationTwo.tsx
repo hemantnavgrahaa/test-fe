@@ -59,7 +59,8 @@ const BNavigationTwo = () => {
             Home
             <div className="tooltip-arrow" data-popper-arrow></div>
           </div>
-          <button
+          <Link
+            href={allRoutes.DEMO}
             data-tooltip-target="tooltip-bookmark"
             type="button"
             className="inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800 group"
@@ -74,7 +75,7 @@ const BNavigationTwo = () => {
               <path d="M13 20a1 1 0 0 1-.64-.231L7 15.3l-5.36 4.469A1 1 0 0 1 0 19V2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17a1 1 0 0 1-1 1Z" />
             </svg>
             <span className="sr-only">Bookmark</span>
-          </button>
+          </Link>
           <div
             id="tooltip-bookmark"
             role="tooltip"
@@ -83,7 +84,8 @@ const BNavigationTwo = () => {
             Bookmark
             <div className="tooltip-arrow" data-popper-arrow></div>
           </div>
-          <button
+          <Link
+            href={allRoutes.PROFILE("cat")}
             data-tooltip-target="tooltip-post"
             type="button"
             className="inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800 group"
@@ -104,7 +106,7 @@ const BNavigationTwo = () => {
               />
             </svg>
             <span className="sr-only">New post</span>
-          </button>
+          </Link>
           <div
             id="tooltip-post"
             role="tooltip"

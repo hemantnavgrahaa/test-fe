@@ -1,5 +1,6 @@
 "use client";
 import BNavigationTwo from "@/components/atoms/bottomNavigation/bNavigationTwo";
+import { SessionProvider } from "next-auth/react";
 
 export default function RootProviders({
   children,
@@ -8,7 +9,7 @@ export default function RootProviders({
 }>) {
   return (
     <>
-      {children}
+      <SessionProvider>{children}</SessionProvider>
       <BNavigationTwo />
     </>
   );

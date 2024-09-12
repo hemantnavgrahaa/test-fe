@@ -1,15 +1,14 @@
-"use client";
+import { authOptions } from "@/auth";
 import LoginForm from "@/components/atoms/loginForm/loginForm";
 import { allRoutes } from "@/constants/allRoutes";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
-export default function Login() {
-  const session = useSession();
-  const router = useRouter();
+export default async function Login() {
+  const session = await getServerSession(authOptions);
 
-  if (session?.data) {
-    router.push(allRoutes.HOME);
+  if (session) {
+    redirect(allRoutes.HOME);
   }
 
   return (

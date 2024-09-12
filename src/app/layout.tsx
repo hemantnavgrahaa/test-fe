@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body
-        className={`${googleFont.className} light transition-colors duration-200`}
+        className={`${googleFont.className} dark transition-colors duration-200`}
       >
         <RootProviders>{children}</RootProviders>
       </body>

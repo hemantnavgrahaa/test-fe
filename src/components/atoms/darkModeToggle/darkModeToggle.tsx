@@ -8,9 +8,9 @@ const DarkModeToggle = () => {
 
   useEffect(() => {
     try {
-      const darkModeSetting =
-        window.localStorage.getItem("darkMode") === "true";
-      setIsDarkMode(darkModeSetting);
+      const localDarkMode = window.localStorage.getItem("darkMode") ?? "true";
+      const darkModeSetting = localDarkMode === "true";
+      setIsDarkMode(JSON.parse(localDarkMode));
       document.body.classList.toggle("dark", darkModeSetting);
     } catch (error) {
       console.log(error);
